@@ -1,0 +1,211 @@
+.card {
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+  border: 1px solid var(--gray-200);
+  transition: box-shadow 0.2s, transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.trainNumber {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.label {
+  font-size: 11px;
+  color: var(--gray-400);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.number {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--blue-dark);
+}
+
+.seatsInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.freeSeats {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--green);
+}
+
+.seatsLabel {
+  font-size: 11px;
+  color: var(--gray-400);
+}
+
+.route {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.station {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 80px;
+}
+
+.stationRight {
+  align-items: flex-end;
+}
+
+.time {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--gray-800);
+  line-height: 1;
+}
+
+.city {
+  font-size: 0.85rem;
+  color: var(--gray-600);
+  font-weight: 500;
+}
+
+.routeMiddle {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.duration {
+  font-size: 0.75rem;
+  color: var(--gray-400);
+  letter-spacing: 0.02em;
+}
+
+.routeLine {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 4px;
+  color: var(--blue);
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--blue);
+  flex-shrink: 0;
+}
+
+.line {
+  flex: 1;
+  height: 1.5px;
+  background: var(--gray-200);
+}
+
+.trainIcon {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  color: var(--blue);
+}
+
+.date {
+  font-size: 0.72rem;
+  color: var(--gray-400);
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  border-top: 1px solid var(--gray-100);
+  gap: 1rem;
+}
+
+.wagonTypes {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.wagonLabel {
+  font-size: 11px;
+  color: var(--gray-400);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.wagonValue {
+  font-size: 0.8rem;
+  color: var(--gray-600);
+}
+
+.bookBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--blue);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 0.6rem 1.2rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: background 0.18s, transform 0.1s;
+  white-space: nowrap;
+}
+
+.bookBtn:hover {
+  background: var(--blue-dark);
+  transform: scale(1.02);
+}
+
+.bookBtn:active {
+  transform: scale(0.98);
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 1rem;
+  }
+
+  .time {
+    font-size: 1.1rem;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .bookBtn {
+    width: 100%;
+    justify-content: center;
+  }
+}
