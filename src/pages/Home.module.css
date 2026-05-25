@@ -1,0 +1,143 @@
+.page {
+  min-height: 100vh;
+  background: var(--gray-50);
+}
+
+.header {
+  background: #fff;
+  border-bottom: 1px solid var(--gray-200);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.headerInner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0.875rem 1.5rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logoTitle {
+  display: block;
+  font-family: 'Unbounded', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--blue-dark);
+  line-height: 1.2;
+}
+
+.logoSub {
+  display: block;
+  font-size: 0.72rem;
+  color: var(--gray-400);
+  letter-spacing: 0.03em;
+}
+
+.hero {
+  background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue) 100%);
+  padding: 3rem 1.5rem;
+}
+
+.heroInner {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.heroTitle {
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  color: #fff;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.heroSub {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.searchBox {
+  position: relative;
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  padding: 0.25rem;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 1rem;
+  pointer-events: none;
+}
+
+.searchInput {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 0.875rem 1rem 0.875rem 3rem;
+  font-size: 1rem;
+  border-radius: var(--radius);
+  background: transparent;
+  color: var(--gray-800);
+}
+
+.searchInput::placeholder {
+  color: var(--gray-400);
+}
+
+.clearBtn {
+  background: none;
+  border: none;
+  color: var(--gray-400);
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  border-radius: var(--radius-sm);
+  transition: color 0.15s;
+}
+
+.clearBtn:hover {
+  color: var(--gray-600);
+}
+
+.main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+.resultsHeader {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.resultsTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--gray-800);
+}
+
+.count {
+  font-size: 0.875rem;
+  color: var(--gray-400);
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 2rem 1rem;
+  }
+
+  .main {
+    padding: 1.5rem 1rem 3rem;
+  }
+}
