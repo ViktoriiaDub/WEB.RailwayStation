@@ -1,0 +1,202 @@
+.wrapper {
+  background: #fff;
+  border-radius: var(--radius);
+  border: 1px solid var(--gray-200);
+  padding: 1.25rem 1.5rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--gray-800);
+  font-family: 'Geologica', sans-serif;
+}
+
+.selected {
+  font-size: 0.8rem;
+  color: var(--blue);
+  font-weight: 500;
+}
+
+.legend {
+  display: flex;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--gray-100);
+  flex-wrap: wrap;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  color: var(--gray-600);
+}
+
+.legendDot {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.legendDot.free {
+  background: var(--green-light);
+  border: 1.5px solid var(--green);
+}
+
+.legendDot.selected {
+  background: var(--blue-light);
+  border: 1.5px solid var(--blue);
+}
+
+.legendDot.booked {
+  background: var(--red-light);
+  border: 1.5px solid var(--red);
+}
+
+/* Seat button */
+.seat {
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  border: 1.5px solid;
+  transition: transform 0.12s, box-shadow 0.12s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Geologica', sans-serif;
+}
+
+.seat.free {
+  background: var(--green-light);
+  border-color: var(--green);
+  color: var(--green);
+}
+
+.seat.free:hover {
+  background: #d1fae5;
+  transform: scale(1.1);
+  box-shadow: 0 2px 8px rgba(5, 150, 105, 0.3);
+}
+
+.seat.selected {
+  background: var(--blue);
+  border-color: var(--blue-dark);
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 2px 8px rgba(26, 86, 219, 0.35);
+}
+
+.seat.selected:hover {
+  background: var(--blue-dark);
+}
+
+.seat.booked {
+  background: var(--red-light);
+  border-color: #fca5a5;
+  color: #fca5a5;
+  cursor: not-allowed;
+}
+
+/* Wagon */
+.wagon {
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+}
+
+.wagonBody {
+  min-width: 320px;
+}
+
+/* Купе / СВ grid */
+.coupeGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.compartment {
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  border-radius: 8px;
+  padding: 0.75rem;
+  min-width: 100px;
+}
+
+.compNumber {
+  font-size: 0.65rem;
+  color: var(--gray-400);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.compSeats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6px;
+}
+
+/* Плацкарт grid */
+.platzkartGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.platzkartRow {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  border-radius: 8px;
+  padding: 0.625rem 0.75rem;
+}
+
+.platzkartMain {
+  display: flex;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.bunkPair {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.platzkartSide {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-left: 0.75rem;
+  border-left: 1px dashed var(--gray-200);
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    padding: 1rem;
+  }
+
+  .seat {
+    width: 32px;
+    height: 32px;
+    font-size: 0.65rem;
+  }
+}
