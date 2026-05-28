@@ -1,0 +1,98 @@
+.wrapper {
+  background: #fff;
+  border-radius: var(--radius);
+  border: 1px solid var(--gray-200);
+  padding: 1.25rem 1.5rem;
+}
+
+.title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--gray-800);
+  margin-bottom: 1rem;
+  font-family: 'Geologica', sans-serif;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.wagonBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  background: var(--gray-50);
+  border: 2px solid var(--gray-200);
+  border-radius: var(--radius-sm);
+  padding: 0.75rem 1rem;
+  text-align: left;
+  transition: border-color 0.18s, background 0.18s, transform 0.1s;
+}
+
+.wagonBtn:hover:not(:disabled) {
+  border-color: var(--blue);
+  background: var(--blue-light);
+  transform: translateX(3px);
+}
+
+.wagonBtn.active {
+  border-color: var(--blue);
+  background: var(--blue-light);
+}
+
+.wagonBtn.full {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.wagonIcon {
+  color: var(--blue);
+  flex-shrink: 0;
+}
+
+.wagonBtn.full .wagonIcon {
+  color: var(--gray-400);
+}
+
+.wagonInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.wagonNum {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--gray-800);
+}
+
+.wagonType {
+  font-size: 0.75rem;
+  color: var(--gray-400);
+}
+
+.wagonSeats {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.freeCount {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--green);
+}
+
+.freeCount.zero {
+  color: var(--gray-400);
+}
+
+.freeLabel {
+  font-size: 0.7rem;
+  color: var(--gray-400);
+}
